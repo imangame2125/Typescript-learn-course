@@ -6,7 +6,7 @@ import Status from "./components/pages/Status";
 import Heading from "./components/pages/Heading";
 import { Wrapper } from "./components/pages/Wrapper";
 import User from "./components/pages/User";
-import Container from "./components/pages/Counter";
+import Container from "./components/pages/Container";
 
 function App() {
   const personName = {

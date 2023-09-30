@@ -1,10 +1,14 @@
 import React from 'react'
-import { PersonListProps } from '../types/PersonLIstProps'
+import { Name } from '../types/PersonLIstProps'
 
-const PersonList = (props:PersonListProps) => {
+type PersonsListProps = {
+  names:Name[]
+}
+
+const PersonList = ({names}:PersonsListProps) => {
   return (
     <div>
-        {props.names.map((name)=>{
+        {names.map((name)=>{
             return(
                 <h2 key={name.firstName}>{name.firstName} {name.lastName}</h2>
             )
