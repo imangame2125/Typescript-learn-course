@@ -82,7 +82,7 @@ function App() {
 
       <Private isLoggedIn={true} component={LogIn}/>
 
-      <List items={[{ id: 1, name: 'Batman' }, { id: 2, name: 'SuperMan' }, { id: 3, name: 'SpiderMan' }]} onClick={(item) => console.log(item)}/>
+      <List items={['Batman','SuperMan','SpiderMan']} onClick={()=>console.log(item)}/>
     </div>
   );
 }

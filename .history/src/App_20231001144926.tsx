@@ -14,10 +14,6 @@ import Box from "./components/pages/Box";
 import { UserContextProvider } from "./components/context/UserContext";
 import UserContainer from './components/context/UserContainer'
 import DomRef from "./components/ref/DomRef";
-import Private from "./components/auth/Private";
-import Profile from "./components/auth/Profile";
-import LogIn from "./components/auth/LogIn";
-import { List } from "./components/generics/List";
 
 
 function App() {
@@ -79,10 +75,6 @@ function App() {
       </UserContextProvider>
 
       <DomRef/>
-
-      <Private isLoggedIn={true} component={LogIn}/>
-
-      <List items={[{ id: 1, name: 'Batman' }, { id: 2, name: 'SuperMan' }, { id: 3, name: 'SpiderMan' }]} onClick={(item) => console.log(item)}/>
     </div>
   );
 }
