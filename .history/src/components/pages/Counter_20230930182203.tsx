@@ -11,7 +11,7 @@ function reducer(
       };
     case "resut":
       return {
-        count: 10,
+        count: 2,
       };
 
     case "DECREMENT":

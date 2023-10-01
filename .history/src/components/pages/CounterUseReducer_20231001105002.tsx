@@ -1,0 +1,36 @@
+import React, { useReducer } from "react";
+const initialValue = {
+  count: 0,
+};
+
+type CounterState = {
+  count: number;
+};
+
+type CounterAction = {
+  type: 'INC'|'DEC';
+  payload: number;
+};
+const reducer = (state: CounterState, action: CounterAction) => {
+  switch (action.type) {
+    case "INC":
+      return { ...state, count: state.count + action.payload };
+
+    case "DEC":
+      return { ...state, count: state.count - action.payload };
+    default:
+      return state;
+  }
+};
+const CounterUseReducer = () => {
+  const [state, dispatch] = useReducer(reducer, initialValue);
+  return (
+    <div>
+      <h1>Count :{state.count}</h1>
+      <button onClick={() => dispatch({ type: "INC", payload: 50 })}>+</button>
+      <button onClick={() => dispatch({ type: "DEC", payload: 50 })}>-</button>
+    </div>
+  );
+};
+
+export default CounterUseReducer;

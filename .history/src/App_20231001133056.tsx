@@ -12,8 +12,7 @@ import CounterUseReducer from "./components/pages/CounterUseReducer";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/pages/Box";
 import { UserContextProvider } from "./components/context/UserContext";
-import UserContainer from './components/context/UserContainer'
-
+import UserPerson from "./components/context/UserPerson";
 
 function App() {
   const personName = {
@@ -69,9 +68,7 @@ function App() {
 
       <CounterUseReducer/>
 
-      <UserContextProvider>
-        <UserContainer/>
-      </UserContextProvider>
+    
     </div>
   );
 }

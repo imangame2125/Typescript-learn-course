@@ -1,17 +1,10 @@
 import React, { useReducer } from "react";
 
-function reducer(
-  state: { count: number },
-  action: { type: string; payload: number }
-) {
+function reducer(state: { count: number }, action: {type:string;payload:number}) {
   switch (action.type) {
     case "INCREMENT":
       return {
         count: state.count + action.payload,
-      };
-    case "resut":
-      return {
-        count: 10,
       };
 
     case "DECREMENT":
@@ -33,13 +26,6 @@ const Container = () => {
     });
   };
 
-  // const handleReset = ()=>{
-  //   dispatch({
-  //     type:'resut',
-      
-  //   })
-  // }
-
   const handleDic = () => {
     dispatch({
       type: "DECREMENT",
@@ -53,7 +39,6 @@ const Container = () => {
       <button onClick={handleInc}>Increment 10</button>
       {/* <button onClick={() => dispatch({ type: "DECREMENT", payload: 10 })}> */}
       <button onClick={handleDic}>Decrement 10</button>
-      {/* <button onClick={handleReset}>Reset</button> */}
     </>
   );
 };

@@ -11,7 +11,7 @@ function reducer(
       };
     case "resut":
       return {
-        count: 10,
+        count: 0,
       };
 
     case "DECREMENT":
@@ -33,13 +33,6 @@ const Container = () => {
     });
   };
 
-  // const handleReset = ()=>{
-  //   dispatch({
-  //     type:'resut',
-      
-  //   })
-  // }
-
   const handleDic = () => {
     dispatch({
       type: "DECREMENT",
@@ -53,7 +46,6 @@ const Container = () => {
       <button onClick={handleInc}>Increment 10</button>
       {/* <button onClick={() => dispatch({ type: "DECREMENT", payload: 10 })}> */}
       <button onClick={handleDic}>Decrement 10</button>
-      {/* <button onClick={handleReset}>Reset</button> */}
     </>
   );
 };
